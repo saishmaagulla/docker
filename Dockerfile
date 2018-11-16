@@ -22,9 +22,9 @@ RUN apt-get update \
 #RUN sed -i -e "s/;\?date.timezone\s*=\s*.*/date.timezone = Europe\/Kiev/g" /etc/php5/fpm/php.ini
 
 # Define default command.
-ADD /vol1/default /etc/nginx/sites-available/
+ADD ../docker-repo/vol1/default /etc/nginx/sites-available/
 
-ADD /vol1/php.ini /etc/php/7.1/fpm/
+ADD ../docker-repo/vol1/php.ini /etc/php/7.1/fpm/
 #ADD /index.php /blog/public/
 #ENTRYPOINT service nginx start
 #WORKDIR /
