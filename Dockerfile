@@ -3,7 +3,7 @@ FROM debian:latest
 #RUN apt-get update
 #RUN apt-get install -y nginx php7.1 php7.1-fpm composer openssl pdo-mysql php-mbstring
 ENV PATH "$PATH:/root/.composer/vendor/bin"
-ADD TelematicsHub/ .
+ADD . .
 RUN apt-get update \
         && apt-get -y install wget apt-transport-https lsb-release ca-certificates \
         && wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg \
