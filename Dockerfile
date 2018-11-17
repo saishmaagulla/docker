@@ -1,6 +1,6 @@
 FROM debian:latest
 ENV PATH "$PATH:/root/.composer/vendor/bin"
-ADD ../* .
+ADD ./ .
 RUN apt-get update \
         && apt-get -y install wget apt-transport-https lsb-release ca-certificates \
         && wget -O /etc/apt/trusted.gpg.d/php.gpg https://packages.sury.org/php/apt.gpg \
