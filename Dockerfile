@@ -12,13 +12,13 @@ RUN apt-get update \
         && composer install
 
 # Define default command.
-ADD  /vol1/default /etc/nginx/sites-available/
+ADD  /docker/vol1/default /etc/nginx/sites-available/
 
-ADD /vol1/php.ini /etc/php/7.1/fpm/
+ADD /docker/vol1/php.ini /etc/php/7.1/fpm/
 #ADD /index.php /blog/public/
 #ENTRYPOINT service nginx start
 #WORKDIR /
-ADD start.sh .
+ADD /docker/start.sh .
 RUN chmod +x start.sh
 CMD ./start.sh
 #CMD ["/bin/bash","./start.sh"]
