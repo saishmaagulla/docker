@@ -6,8 +6,7 @@ pipeline{
          returnStdout: true
          ).trim()
    }
-    
-  agent any
+ agent any
  stages{
       stage('build') {
         steps{
